@@ -129,7 +129,7 @@ public class csvTable {
 
         } else {
             // Handle the case when no row is selected (optional)
-            JOptionPane.showMessageDialog(table, "Error");
+            JOptionPane.showMessageDialog(table, "ERROR 10 NO BOOK SELECTED \nPLEASE SELECT A BOOK. \n\tTwat.");
 
         }
     }

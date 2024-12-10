@@ -290,12 +290,14 @@ public class personalLibrary implements ActionListener {
         }
     }
     private String pathToLibrary(){
-        FilePathOSBased filePathOSBased = new FilePathOSBased();
-        return filePathOSBased.getFilePath() + "Librerie.dati.csv";
+        FileFinder fileFinder = new FileFinder();
+        String str = String.valueOf(fileFinder.LibrifilePath());
+        return str;
     }
     private String pathToCSVMaster(){
-        FilePathOSBased filePathOSBased = new FilePathOSBased();
-        return filePathOSBased.getFilePath() + "Libri.dati.csv";
+        FileFinder fileFinder = new FileFinder();
+        String str = String.valueOf(fileFinder.LibrifilePath());
+        return str;
 
     }
 

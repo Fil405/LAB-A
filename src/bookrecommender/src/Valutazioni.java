@@ -3,9 +3,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.awt.event.*;
+import java.awt.Graphics2D;
 
 
-public class Valutazioni {
+
+public class Valutazioni extends JButton{
 
     private String pathTo = "ValutazioniLibri.dati.csv";
 
@@ -16,6 +18,9 @@ public class Valutazioni {
         frame.setSize(720,480);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
+        setContentAreaFilled(false);
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+        
 
 
 

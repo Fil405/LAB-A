@@ -38,7 +38,9 @@ public class Frame {
     }
 
     String getCSVfilePath(){
-        FilePathOSBased filePathOSBased = new FilePathOSBased();
-        return filePathOSBased.getFilePath() + "Libri.dati.csv";
+        FileFinder fileFinder = new FileFinder();
+        String str = String.valueOf(fileFinder.LibrifilePath());
+
+        return str;
     }
 }

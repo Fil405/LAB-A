@@ -14,13 +14,17 @@ public class csvMaker {
 
     private String masterCSV = "BooksDatasetClean.csv";
     private String booksDataCSV = "Libri.dati.csv";
-    private FilePathOSBased osBased;
+
 
     public csvMaker() {
-        osBased = new FilePathOSBased();
+        FileFinder fileFinder = new FileFinder();
+        String outputFile = String.valueOf(fileFinder.LibrifilePath());
+        String inputFile = String.valueOf(fileFinder.MasterCSVPath());
+
         try (
-                CSVReader reader = new CSVReader(new FileReader(osBased.getFilePath() + masterCSV));
-                CSVWriter writer = new CSVWriter(new FileWriter(osBased.getFilePath() + booksDataCSV))
+                CSVReader reader = new CSVReader(new FileReader(inputFile));
+                CSVWriter writer = new CSVWriter(new FileWriter(outputFile));
+
         ) {
             String[] nextLine;
             while ((nextLine = reader.readNext()) != null) {

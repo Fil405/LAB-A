@@ -4,10 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.BufferedReader;
+import java.io.*;
 import java.io.FileReader;
 import java.io.IOException;
 import com.opencsv.*;
@@ -158,8 +155,9 @@ public class register implements ActionListener {
     }
 
 
-    public String pathToRegisterFile(){
-        FilePathOSBased filePathOSBased = new FilePathOSBased();
-        return filePathOSBased.getFilePath() + "UtentiRegistrati.dati.csv";
+    public File pathToRegisterFile(){
+        FileFinder fileFinder = new FileFinder();
+        return fileFinder.UtentiRegistrati();
+
     }
 }

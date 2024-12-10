@@ -5,6 +5,7 @@ import com.opencsv.CSVReader;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
 import java.io.FileReader;
 
 
@@ -101,6 +102,7 @@ public class LogInPanel implements ActionListener {
         isLogged = false;
 
         try(CSVReader reader = new CSVReader(new FileReader(getRegiterFilePath()))) {
+
             String[] columns;
             while((columns = reader.readNext()) != null) {
                 if(columns.length >= 4 && columns[3].equals(username)){
@@ -128,8 +130,13 @@ public class LogInPanel implements ActionListener {
     }
 
     private String getRegiterFilePath(){
-        FilePathOSBased filePathOSBased = new FilePathOSBased();
-        return  filePathOSBased.getFilePath() + "UtentiRegistrati.dati.csv";
+        FileFinder fileFinder = new FileFinder();
+
+
+        String str = String.valueOf(fileFinder.UtentiRegistrati());
+
+
+        return str;
 
     }
     public void generateLibrary(){
