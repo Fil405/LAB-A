@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 import java.awt.event.*;
-import java.awt.Graphics2D;
+
 
 
 
@@ -20,7 +20,7 @@ public class Valutazioni extends JButton{
         frame.setLocationRelativeTo(null);
         setContentAreaFilled(false);
         setCursor(new Cursor(Cursor.HAND_CURSOR));
-        
+
 
 
 
