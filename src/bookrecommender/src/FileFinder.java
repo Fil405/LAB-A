@@ -35,7 +35,7 @@ public class FileFinder {
     }
     public File MasterCSVPath(){
         String sep = File.separator;
-        File MasterCSV = new File("." + sep +"src"+ sep +"bookrecommender"+ sep + "BooksDatasetClean.csv");
+        File MasterCSV = new File("." + sep +"src"+ sep +"bookrecommender"+ sep + "data" + sep + "Dataset.csv");
         return MasterCSV;
     }
 }

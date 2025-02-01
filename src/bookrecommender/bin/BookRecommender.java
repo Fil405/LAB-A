@@ -13,8 +13,8 @@ public class BookRecommender {
 
         /*csvMaker va utilizzato solo all'inizio.
         Genera Libri.dati.csv partendo da BooksDatasetClean.csv.
-        csvMaker csvMaker = new csvMaker();
         **/
+        //csvMaker csvMaker = new csvMaker();
         SwingUtilities.invokeLater(() -> new Frame());
 
 

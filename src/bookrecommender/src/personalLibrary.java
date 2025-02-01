@@ -291,7 +291,7 @@ public class personalLibrary implements ActionListener {
     }
     private String pathToLibrary(){
         FileFinder fileFinder = new FileFinder();
-        String str = String.valueOf(fileFinder.LibrifilePath());
+        String str = String.valueOf(fileFinder.LibreriePathDati());
         return str;
     }
     private String pathToCSVMaster(){

@@ -12,19 +12,18 @@ import java.util.List;
 
 public class csvMaker {
 
-    private String masterCSV = "BooksDatasetClean.csv";
-    private String booksDataCSV = "Libri.dati.csv";
 
+    private FileFinder fileFinder;
 
     public csvMaker() {
-        FileFinder fileFinder = new FileFinder();
-        String outputFile = String.valueOf(fileFinder.LibrifilePath());
+        fileFinder = new FileFinder();
         String inputFile = String.valueOf(fileFinder.MasterCSVPath());
+        String outputFile = String.valueOf(fileFinder.LibrifilePath());
+
 
         try (
                 CSVReader reader = new CSVReader(new FileReader(inputFile));
                 CSVWriter writer = new CSVWriter(new FileWriter(outputFile));
-
         ) {
             String[] nextLine;
             while ((nextLine = reader.readNext()) != null) {
